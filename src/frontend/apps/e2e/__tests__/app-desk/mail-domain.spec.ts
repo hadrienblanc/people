@@ -542,12 +542,8 @@ test.describe('Mail domain', () => {
 
         await expect(
           page.getByText(
-            'The domain name encounters an error. Please contact our support team to solve the problem:',
+            'The domain name encounters an error. Please contact our support team to solve the problem.',
           ),
-        ).toBeVisible();
-
-        await expect(
-          page.getByRole('link', { name: 'suiteterritoriale@anct.gouv.fr' }),
         ).toBeVisible();
 
         await expect(page.getByTestId('button-new-mailbox')).toBeDisabled();
@@ -971,7 +967,7 @@ test.describe('Mail domain', () => {
 
         await expect(
           page.getByText(
-            'The domain name encounters an error. Please contact our support team to solve the problem:',
+            'The domain name encounters an error. Please contact our support team to solve the problem.',
           ),
         ).toBeVisible();
 
